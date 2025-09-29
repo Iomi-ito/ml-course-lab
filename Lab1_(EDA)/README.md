@@ -28,7 +28,6 @@
 
 Ниже представлены первые 5 строк датасета.
 
-
 ```python
 import pandas as pd
 import numpy as np
@@ -38,9 +37,6 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("C:/Users/Анна/Documents/heart.csv")
 df.head()
 ```
-
-
-
 
 <div>
 <table border="1" class="dataframe">
@@ -209,13 +205,6 @@ df['Age'].hist()
 ```
 
 
-
-
-    <Axes: >
-
-
-
-
     
 ![png](lab1_files/lab1_6_1.png)
     
@@ -238,17 +227,8 @@ sns.violinplot(x="Sex", y="Age", hue="HeartDisease", data=df, split=True)
 ```
 
 
-
-
-    <Axes: xlabel='Sex', ylabel='Age'>
-
-
-
-
-    
 ![png](lab1_files/lab1_8_1.png)
     
-
 
 С возрастом риск наличия сердечно-сосудистого заболевания выше. Сердечно-сосудистые заболевания у мужчин проявляются раньше, чем у женщин. Признак возраста кажется важным для прогнозирования.
 
@@ -259,14 +239,6 @@ sns.violinplot(x="Sex", y="Age", hue="HeartDisease", data=df, split=True)
 ```python
 sns.countplot(x='Sex', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='Sex', ylabel='count'>
-
-
-
 
     
 ![png](lab1_files/lab1_11_1.png)
@@ -295,14 +267,6 @@ df.groupby(['Sex','HeartDisease'])['HeartDisease'].count()
 sns.barplot(x = "Sex", y = "HeartDisease", data = df)
 ```
 
-
-
-
-    <Axes: xlabel='Sex', ylabel='HeartDisease'>
-
-
-
-
     
 ![png](lab1_files/lab1_13_1.png)
     
@@ -318,15 +282,6 @@ sns.barplot(x = "Sex", y = "HeartDisease", data = df)
 ```python
 sns.countplot(x='ChestPainType', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='ChestPainType', ylabel='count'>
-
-
-
-
     
 ![png](lab1_files/lab1_16_1.png)
     
@@ -336,14 +291,6 @@ sns.countplot(x='ChestPainType', data=df)
 ```python
 sns.countplot(x="ChestPainType", hue="HeartDisease", data=df)
 ```
-
-
-
-
-    <Axes: xlabel='ChestPainType', ylabel='count'>
-
-
-
 
     
 ![png](lab1_files/lab1_17_1.png)
@@ -357,12 +304,6 @@ sns.boxplot(x="ChestPainType", y="Age", data=df)
 
 
 
-
-    <Axes: xlabel='ChestPainType', ylabel='Age'>
-
-
-
-
     
 ![png](lab1_files/lab1_18_1.png)
     
@@ -372,13 +313,6 @@ sns.boxplot(x="ChestPainType", y="Age", data=df)
 ```python
 sns.barplot(x='ChestPainType', y='HeartDisease', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='ChestPainType', ylabel='HeartDisease'>
-
-
 
 
     
@@ -420,11 +354,6 @@ df['RestingBP'].hist()
 
 
 
-    <Axes: >
-
-
-
-
     
 ![png](lab1_files/lab1_23_1.png)
     
@@ -434,12 +363,6 @@ df['RestingBP'].hist()
 ```python
 sns.violinplot(x='Sex', y='RestingBP', hue='HeartDisease',data=df, split=True)
 ```
-
-
-
-
-    <Axes: xlabel='Sex', ylabel='RestingBP'>
-
 
 
 
@@ -455,12 +378,6 @@ labels = ['<40', '40-55', '55-65','65+']
 df['AgeGroup'] = pd.cut(df['Age'], bins=bins, labels=labels)
 df.groupby(['Sex', 'AgeGroup', 'HeartDisease'])['RestingBP'].median()
 ```
-
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19508\2027230261.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
-      df.groupby(['Sex', 'AgeGroup', 'HeartDisease'])['RestingBP'].median()
-    
-
-
 
 
     Sex  AgeGroup  HeartDisease
@@ -491,13 +408,6 @@ df.groupby(['Sex', 'AgeGroup', 'HeartDisease'])['RestingBP'].median()
 ```python
 sns.boxplot(x='ChestPainType', y='RestingBP', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='ChestPainType', ylabel='RestingBP'>
-
-
 
 
     
@@ -533,11 +443,6 @@ Cреднее давление мало отличается по группам
 group_median=df.groupby(['Sex', 'AgeGroup'])['RestingBP'].median()
 group_median
 ```
-
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19508\3594992028.py:2: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
-      group_median=df.groupby(['Sex', 'AgeGroup'])['RestingBP'].median()
-    
-
 
 
 
@@ -591,30 +496,14 @@ df['Cholesterol'].hist()
 ```
 
 
-
-
-    <Axes: >
-
-
-
-
     
 ![png](lab1_files/lab1_35_1.png)
     
 
 
-
 ```python
 sns.boxplot(data=df, x='AgeGroup', y='Cholesterol')
 ```
-
-
-
-
-    <Axes: xlabel='AgeGroup', ylabel='Cholesterol'>
-
-
-
 
     
 ![png](lab1_files/lab1_36_1.png)
@@ -625,14 +514,6 @@ sns.boxplot(data=df, x='AgeGroup', y='Cholesterol')
 ```python
 sns.violinplot(x="Sex", y="Cholesterol", hue="HeartDisease", data=df,split=True)
 ```
-
-
-
-
-    <Axes: xlabel='Sex', ylabel='Cholesterol'>
-
-
-
 
     
 ![png](lab1_files/lab1_37_1.png)
@@ -645,13 +526,6 @@ sns.boxplot(data=df, x='HeartDisease', y='Cholesterol')
 ```
 
 
-
-
-    <Axes: xlabel='HeartDisease', ylabel='Cholesterol'>
-
-
-
-
     
 ![png](lab1_files/lab1_38_1.png)
     
@@ -661,13 +535,6 @@ sns.boxplot(data=df, x='HeartDisease', y='Cholesterol')
 ```python
 sns.boxplot(x='ChestPainType', y='Cholesterol', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='ChestPainType', ylabel='Cholesterol'>
-
-
 
 
     
@@ -705,12 +572,6 @@ df.groupby(['Sex', 'FastingBS', 'HeartDisease'])['Cholesterol'].mean()
 ```python
 df.groupby(['Sex', 'FastingBS', 'AgeGroup'])['Cholesterol'].median()
 ```
-
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19508\2144165966.py:1: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
-      df.groupby(['Sex', 'FastingBS', 'AgeGroup'])['Cholesterol'].median()
-    
-
-
 
 
     Sex  FastingBS  AgeGroup
@@ -784,13 +645,6 @@ sns.countplot(x='FastingBS', data=df)
 ```
 
 
-
-
-    <Axes: xlabel='FastingBS', ylabel='count'>
-
-
-
-
     
 ![png](lab1_files/lab1_47_1.png)
     
@@ -800,14 +654,6 @@ sns.countplot(x='FastingBS', data=df)
 ```python
 sns.barplot(x='FastingBS', y='HeartDisease', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='FastingBS', ylabel='HeartDisease'>
-
-
-
 
     
 ![png](lab1_files/lab1_48_1.png)
@@ -834,13 +680,6 @@ g = sns.catplot(x="FastingBS", y="Age", hue="HeartDisease", kind="violin", data=
 ```python
 sns.countplot(x='RestingECG', hue='HeartDisease', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='RestingECG', ylabel='count'>
-
-
 
 
     
@@ -879,12 +718,6 @@ df['MaxHR'].describe()
 df.groupby(['AgeGroup', 'Sex'])['MaxHR'].mean()
 ```
 
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19508\2657495264.py:1: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
-      df.groupby(['AgeGroup', 'Sex'])['MaxHR'].mean()
-    
-
-
-
 
     AgeGroup  Sex
     <40       F      162.600000
@@ -906,14 +739,6 @@ df.groupby(['AgeGroup', 'Sex'])['MaxHR'].mean()
 sns.violinplot(x='Sex', y='MaxHR', hue='HeartDisease',data=df, split=True)
 ```
 
-
-
-
-    <Axes: xlabel='Sex', ylabel='MaxHR'>
-
-
-
-
     
 ![png](lab1_files/lab1_58_1.png)
     
@@ -924,38 +749,19 @@ sns.violinplot(x='Sex', y='MaxHR', hue='HeartDisease',data=df, split=True)
 sns.boxplot(x='ExerciseAngina',y='MaxHR',hue='HeartDisease', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='ExerciseAngina', ylabel='MaxHR'>
-
-
-
-
-    
+  
 ![png](lab1_files/lab1_59_1.png)
     
-
 
 У пациентов без стенокардии (ExerciseAngina=N) и высокой ЧСС риск минимален. Чем ниже максимальная ЧСС, тем выше вероятность наличия заболевания, даже при отсутствии стенокардии. У пациентов же с ExerciseAngina=Y средние значения ЧСС ещё ниже, а риск выше. Признак имеет явную корреляцию с целевым признаком.
 
 ### Признак ExerciseAngina
 Категориальный признак, отражающий наличие стенокардии (Y = да, N = нет).
 
-
 ```python
 sns.countplot(x='ExerciseAngina', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='ExerciseAngina', ylabel='count'>
-
-
-
-
-    
+ 
 ![png](lab1_files/lab1_62_1.png)
     
 
@@ -964,13 +770,6 @@ sns.countplot(x='ExerciseAngina', data=df)
 ```python
 sns.barplot(x='ExerciseAngina', y='HeartDisease', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='ExerciseAngina', ylabel='HeartDisease'>
-
-
 
 
     
@@ -984,13 +783,6 @@ sns.countplot(x='ExerciseAngina', hue='ChestPainType', data=df)
 ```
 
 
-
-
-    <Axes: xlabel='ExerciseAngina', ylabel='count'>
-
-
-
-
     
 ![png](lab1_files/lab1_64_1.png)
     
@@ -1000,12 +792,6 @@ sns.countplot(x='ExerciseAngina', hue='ChestPainType', data=df)
 ```python
 sns.violinplot(x='Sex', y='Age', hue='ExerciseAngina',data=df, split=True)
 ```
-
-
-
-
-    <Axes: xlabel='Sex', ylabel='Age'>
-
 
 
 
@@ -1046,12 +832,6 @@ df['Oldpeak'].hist()
 
 
 
-
-    <Axes: >
-
-
-
-
     
 ![png](lab1_files/lab1_69_1.png)
     
@@ -1062,15 +842,6 @@ df['Oldpeak'].hist()
 sns.violinplot(x='ExerciseAngina', y='Oldpeak', hue='HeartDisease',data=df, split=True)
 ```
 
-
-
-
-    <Axes: xlabel='ExerciseAngina', ylabel='Oldpeak'>
-
-
-
-
-    
 ![png](lab1_files/lab1_70_1.png)
     
 
@@ -1086,13 +857,6 @@ sns.violinplot(x='ExerciseAngina', y='Oldpeak', hue='HeartDisease',data=df, spli
 ```python
 sns.countplot(x='ST_Slope', hue='HeartDisease', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='ST_Slope', ylabel='count'>
-
-
 
 
     
@@ -1204,14 +968,6 @@ pd.crosstab(df['ST_Slope'], df['ExerciseAngina'])
 sns.countplot(x='HeartDisease', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='HeartDisease', ylabel='count'>
-
-
-
-
     
 ![png](lab1_files/lab1_80_1.png)
     
@@ -1246,9 +1002,6 @@ df['Age1'] = pd.qcut(df['Age'], 5)
 df.groupby(['Age1'])['HeartDisease'].mean().to_frame().style.background_gradient(cmap='summer_r')
 ```
 
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19508\3904643773.py:2: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
-      df.groupby(['Age1'])['HeartDisease'].mean().to_frame().style.background_gradient(cmap='summer_r')
-    
 
 </style>
 <table id="T_ccdf1">
@@ -1343,7 +1096,4 @@ plt.show()
     
 ![png](lab1_files/lab1_94_0.png)
     
-
-
-
 
