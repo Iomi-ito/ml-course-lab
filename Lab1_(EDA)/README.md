@@ -1263,30 +1263,6 @@ df.groupby(['Age1'])['HeartDisease'].mean().to_frame().style.background_gradient
       df.groupby(['Age1'])['HeartDisease'].mean().to_frame().style.background_gradient(cmap='summer_r')
     
 
-
-
-
-<style type="text/css">
-#T_ccdf1_row0_col0 {
-  background-color: #ffff66;
-  color: #000000;
-}
-#T_ccdf1_row1_col0 {
-  background-color: #81c066;
-  color: #000000;
-}
-#T_ccdf1_row2_col0 {
-  background-color: #62b066;
-  color: #f1f1f1;
-}
-#T_ccdf1_row3_col0 {
-  background-color: #008066;
-  color: #f1f1f1;
-}
-#T_ccdf1_row4_col0 {
-  background-color: #068266;
-  color: #f1f1f1;
-}
 </style>
 <table id="T_ccdf1">
   <thead>
@@ -1380,4 +1356,5 @@ plt.show()
     
 ![png](lab1_files/lab1_94_0.png)
     
+
 
