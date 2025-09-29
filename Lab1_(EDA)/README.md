@@ -1171,7 +1171,7 @@ pd.crosstab(df['ST_Slope'], df['ExerciseAngina'])
     .dataframe thead th {
         text-align: right;
     }
-</style>
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1356,5 +1356,6 @@ plt.show()
     
 ![png](lab1_files/lab1_94_0.png)
     
+
 
 
