@@ -616,8 +616,8 @@ print("Корреляция (восстановление по группам ) 
 # 2 метод - восстановление с помощью KNNImputer
 from sklearn.impute import KNNImputer
 df_knn = df.copy()
-
-num_cols = df_knn.select_dtypes(include=[np.number]).columns
+num_cols = df_knn.select_dtypes(include=[np.number]).columns.tolist()
+num_cols.remove('HeartDisease')
 imputer = KNNImputer(n_neighbors=3)
 df_knn[num_cols] = imputer.fit_transform(df_knn[num_cols])
 
@@ -628,10 +628,8 @@ print("Корреляция (KNNImputer):", corr_knn)
 
     Корреляция (без восстановленных значений) -  0.10386559562465626
     Корреляция (восстановление по группам ) -  0.0823346079499543
-    Корреляция (KNNImputer): 0.10263960219316545
+    Корреляция (KNNImputer): 0.09941408622536854
     
-
-
 ```python
 df = df_knn.copy()
 ```
@@ -645,7 +643,7 @@ sns.countplot(x='FastingBS', data=df)
 ```
 
 
-    
+  
 ![png](lab1_files/lab1_47_1.png)
     
 
@@ -1096,4 +1094,5 @@ plt.show()
     
 ![png](lab1_files/lab1_94_0.png)
     
+
 
