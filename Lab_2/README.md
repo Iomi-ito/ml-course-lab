@@ -1892,14 +1892,10 @@ for fold, (train_idx, val_idx) in enumerate(kf.split(X_train), 1):
     rmse_scores.append(np.sqrt(mse_scores[-1]))
     r2_scores.append(r2_score(y_tr, y_pred_train))
 
-
     y_pred_val = predict(w, X_val)
     mse_scores_test.append(mean_squared_error(y_val, y_pred_val))
     rmse_scores_test.append(np.sqrt(mse_scores_test[-1]))
     r2_scores_test.append(r2_score(y_val, y_pred_val))
-
-    w = gradient_descent(X_tr, y_tr)
-    y_pred = predict(w, X_val)
 
 
 df_custom = pd.DataFrame({
@@ -1960,11 +1956,6 @@ for fold, (train_idx, val_idx) in enumerate(kf.split(X_train), 1):
     rmse_scores_test.append(np.sqrt(mse_scores_test[-1]))
     r2_scores_test.append(r2_score(y_val, y_pred_val))
 
-    w = gradient_descent(X_tr, y_tr)
-    y_pred = predict(w, X_val)
-
-
-
 df_custom = pd.DataFrame({
     "mse-train": mse_scores,
     "rmse-train": rmse_scores,
@@ -2024,10 +2015,6 @@ for fold, (train_idx, val_idx) in enumerate(kf.split(X_train), 1):
     rmse_scores_test.append(np.sqrt(mse_scores_test[-1]))
     r2_scores_test.append(r2_score(y_val, y_pred_val))
 
-    w = gradient_descent(X_tr, y_tr)
-    y_pred = predict(w, X_val)
-
-
 
 df_custom = pd.DataFrame({
     "mse-train": mse_scores,
@@ -2066,5 +2053,6 @@ print(df_custom.round(4))
     
 
 Все реализованные модели показывают схожие результаты. У gradient_descent и batch_gradient_descent наименьшие средние характеристики и их отклонение. 
+
 
 
