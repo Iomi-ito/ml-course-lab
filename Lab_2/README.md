@@ -1625,69 +1625,6 @@ print("Лучшие параметры:", best_params)
 print("Лучший R2 на обучении:", best_score)
 
 ```
-
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:36: RuntimeWarning: overflow encountered in multiply
-      gradient = 2 * (y_pred - yi) * xi
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:38: RuntimeWarning: invalid value encountered in subtract
-      w = w - learning_rate * gradient
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:34: RuntimeWarning: invalid value encountered in matmul
-      y_pred = xi @ w
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:36: RuntimeWarning: overflow encountered in multiply
-      gradient = 2 * (y_pred - yi) * xi
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:38: RuntimeWarning: invalid value encountered in subtract
-      w = w - learning_rate * gradient
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:34: RuntimeWarning: invalid value encountered in matmul
-      y_pred = xi @ w
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:36: RuntimeWarning: overflow encountered in multiply
-      gradient = 2 * (y_pred - yi) * xi
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:38: RuntimeWarning: invalid value encountered in subtract
-      w = w - learning_rate * gradient
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:34: RuntimeWarning: invalid value encountered in matmul
-      y_pred = xi @ w
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:36: RuntimeWarning: overflow encountered in multiply
-      gradient = 2 * (y_pred - yi) * xi
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:38: RuntimeWarning: invalid value encountered in subtract
-      w = w - learning_rate * gradient
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:34: RuntimeWarning: invalid value encountered in matmul
-      y_pred = xi @ w
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\numpy\_core\fromnumeric.py:86: RuntimeWarning: overflow encountered in reduce
-      return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    c:\Users\Анна\AppData\Local\Programs\Python\Python313\Lib\site-packages\sklearn\metrics\_regression.py:1292: RuntimeWarning: overflow encountered in square
-      numerator = xp.sum(weight * (y_true - y_pred) ** 2, axis=0)
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:36: RuntimeWarning: overflow encountered in multiply
-      gradient = 2 * (y_pred - yi) * xi
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:38: RuntimeWarning: invalid value encountered in subtract
-      w = w - learning_rate * gradient
-    C:\Users\Анна\AppData\Local\Temp\ipykernel_19520\2900423012.py:34: RuntimeWarning: invalid value encountered in matmul
-      y_pred = xi @ w
-    
-
     Лучшие параметры: {'learning_rate': 0.001, 'n_iters': 100, 'lambda_reg': 0.01}
     Лучший R2 на обучении: 0.7396071857187241
     
@@ -2129,4 +2066,5 @@ print(df_custom.round(4))
     
 
 Все реализованные модели показывают схожие результаты. У gradient_descent и batch_gradient_descent наименьшие средние характеристики и их отклонение. 
+
 
