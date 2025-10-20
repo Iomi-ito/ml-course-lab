@@ -52,19 +52,6 @@ df.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2142,3 +2129,4 @@ print(df_custom.round(4))
     
 
 Все реализованные модели показывают схожие результаты. У gradient_descent и batch_gradient_descent наименьшие средние характеристики и их отклонение. 
+
