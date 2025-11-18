@@ -30,24 +30,6 @@ df = pd.read_csv("C:/Users/Анна/Documents/heart_lab3.csv", encoding="latin-1
 df.tail()
 
 ```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -194,13 +176,6 @@ sns.countplot(x='target', data=df)
 ```
 
 
-
-
-    <Axes: xlabel='target', ylabel='count'>
-
-
-
-
     
 ![png](3_files/3_3_1.png)
     
@@ -210,13 +185,6 @@ sns.countplot(x='target', data=df)
 ```python
 df['age'].hist()
 ```
-
-
-
-
-    <Axes: >
-
-
 
 
     
@@ -247,11 +215,6 @@ sns.violinplot(y='age', x='sex', hue='target', data=df)
 
 
 
-    <Axes: xlabel='sex', ylabel='age'>
-
-
-
-
     
 ![png](3_files/3_6_1.png)
     
@@ -263,17 +226,9 @@ sns.countplot(x='sex', hue='target', data=df)
 ```
 
 
-
-
-    <Axes: xlabel='sex', ylabel='count'>
-
-
-
-
     
 ![png](3_files/3_7_1.png)
     
-
 
 cp
 
@@ -281,14 +236,6 @@ cp
 ```python
 sns.countplot(x='cp', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='cp', ylabel='count'>
-
-
-
 
     
 ![png](3_files/3_9_1.png)
@@ -317,13 +264,6 @@ sns.boxplot(x="cp", y="age", data=df)
 ```
 
 
-
-
-    <Axes: xlabel='cp', ylabel='age'>
-
-
-
-
     
 ![png](3_files/3_11_1.png)
     
@@ -333,15 +273,6 @@ sns.boxplot(x="cp", y="age", data=df)
 ```python
 sns.countplot(x="cp", hue="target", data=df)
 ```
-
-
-
-
-    <Axes: xlabel='cp', ylabel='count'>
-
-
-
-
     
 ![png](3_files/3_12_1.png)
     
@@ -351,14 +282,6 @@ sns.countplot(x="cp", hue="target", data=df)
 ```python
 sns.barplot(x='cp', y='target', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='cp', ylabel='target'>
-
-
-
 
     
 ![png](3_files/3_13_1.png)
@@ -385,40 +308,16 @@ df['trestbps'].describe()
     max       200.000000
     Name: trestbps, dtype: float64
 
-
-
-
 ```python
 df['trestbps'].hist()
 ```
-
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](3_files/3_16_1.png)
     
 
-
-
 ```python
 sns.violinplot(x='sex', y='trestbps', hue='target',data=df, split=True)
-```
-
-
-
-
-    <Axes: xlabel='sex', ylabel='trestbps'>
-
-
-
-
-    
+```    
 ![png](3_files/3_17_1.png)
     
 
@@ -447,16 +346,7 @@ df['chol'].describe()
 ```python
 df['chol'].hist()
 ```
-
-
-
-
-    <Axes: >
-
-
-
-
-    
+ 
 ![png](3_files/3_19_1.png)
     
 
@@ -465,16 +355,7 @@ df['chol'].hist()
 ```python
 sns.violinplot(x="sex", y="chol", hue="target", data=df,split=True)
 ```
-
-
-
-
-    <Axes: xlabel='sex', ylabel='chol'>
-
-
-
-
-    
+  
 ![png](3_files/3_20_1.png)
     
 
@@ -483,16 +364,7 @@ sns.violinplot(x="sex", y="chol", hue="target", data=df,split=True)
 ```python
 sns.boxplot(data=df, x='target', y='chol')
 ```
-
-
-
-
-    <Axes: xlabel='target', ylabel='chol'>
-
-
-
-
-    
+  
 ![png](3_files/3_21_1.png)
     
 
@@ -524,13 +396,6 @@ sns.countplot(x='fbs', data=df)
 ```
 
 
-
-
-    <Axes: xlabel='fbs', ylabel='count'>
-
-
-
-
     
 ![png](3_files/3_23_1.png)
     
@@ -558,14 +423,6 @@ sns.catplot(x="fbs", y="age", hue="target", kind="violin", data=df, split=True,c
 ```python
 sns.countplot(x='restecg', hue='target', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='restecg', ylabel='count'>
-
-
-
 
     
 ![png](3_files/3_25_1.png)
@@ -598,14 +455,6 @@ sns.violinplot(x='sex', y='thalach', hue='target',data=df, split=True)
 ```
 
 
-
-
-    <Axes: xlabel='sex', ylabel='thalach'>
-
-
-
-
-    
 ![png](3_files/3_27_1.png)
     
 
@@ -614,14 +463,6 @@ sns.violinplot(x='sex', y='thalach', hue='target',data=df, split=True)
 ```python
 sns.boxplot(x='exang',y='thalach',hue='target', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='exang', ylabel='thalach'>
-
-
-
 
     
 ![png](3_files/3_28_1.png)
@@ -634,14 +475,6 @@ sns.countplot(x='exang', data=df)
 ```
 
 
-
-
-    <Axes: xlabel='exang', ylabel='count'>
-
-
-
-
-    
 ![png](3_files/3_29_1.png)
     
 
@@ -650,16 +483,7 @@ sns.countplot(x='exang', data=df)
 ```python
 sns.barplot(x='exang', y='target', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='exang', ylabel='target'>
-
-
-
-
-    
+ 
 ![png](3_files/3_30_1.png)
     
 
@@ -668,13 +492,6 @@ sns.barplot(x='exang', y='target', data=df)
 ```python
 sns.violinplot(x='sex', y='age', hue='exang',data=df, split=True)
 ```
-
-
-
-
-    <Axes: xlabel='sex', ylabel='age'>
-
-
 
 
     
@@ -707,14 +524,6 @@ df['oldpeak'].describe()
 df['oldpeak'].hist()
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](3_files/3_33_1.png)
     
@@ -724,14 +533,6 @@ df['oldpeak'].hist()
 ```python
 sns.countplot(x='slope', hue='target', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='slope', ylabel='count'>
-
-
-
 
     
 ![png](3_files/3_34_1.png)
@@ -759,14 +560,6 @@ df.groupby(['slope'])['oldpeak'].mean()
 sns.countplot(x='ca', hue='target', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='ca', ylabel='count'>
-
-
-
-
     
 ![png](3_files/3_36_1.png)
     
@@ -776,14 +569,6 @@ sns.countplot(x='ca', hue='target', data=df)
 ```python
 sns.countplot(x='thal', hue='target', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='thal', ylabel='count'>
-
-
-
 
     
 ![png](3_files/3_37_1.png)
@@ -802,23 +587,6 @@ df = pd.concat(frames, axis = 1)
 df.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1301,16 +1069,7 @@ plt.subplot(2,3,2)
 plt.title("my-nb confusion matrix")
 sns.heatmap(my_nb_matrix, annot=True,fmt="d",cbar=False, annot_kws={"size": 22}) 
 ```
-
-
-
-
-    <Axes: title={'center': 'my-nb confusion matrix'}>
-
-
-
-
-    
+  
 ![png](3_files/3_52_1.png)
     
 
@@ -1356,23 +1115,6 @@ df.head()
 
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1537,14 +1279,6 @@ df['y'] = df['y'].apply(lambda x: 1 if x=='yes' else 0)
 sns.countplot(x='y', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='y', ylabel='count'>
-
-
-
-
     
 ![png](3_files/3_56_1.png)
     
@@ -1590,14 +1324,6 @@ df['age'].describe()
 df['age'].hist()
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](3_files/3_59_1.png)
     
@@ -1607,13 +1333,6 @@ df['age'].hist()
 ```python
 sns.kdeplot(data=df, x='age', hue='y', fill=True)
 ```
-
-
-
-
-    <Axes: xlabel='age', ylabel='Density'>
-
-
 
 
     
@@ -1666,15 +1385,6 @@ plt.show()
 sns.countplot(x='marital', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='marital', ylabel='count'>
-
-
-
-
-    
 ![png](3_files/3_64_1.png)
     
 
@@ -1684,15 +1394,6 @@ sns.countplot(x='marital', data=df)
 sns.countplot(x='marital', hue='y', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='marital', ylabel='count'>
-
-
-
-
-    
 ![png](3_files/3_65_1.png)
     
 
@@ -1742,14 +1443,6 @@ plt.show()
 sns.countplot(x='default', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='default', ylabel='count'>
-
-
-
-
     
 ![png](3_files/3_69_1.png)
     
@@ -1775,14 +1468,6 @@ plt.show()
 sns.countplot(x='housing', hue='y', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='housing', ylabel='count'>
-
-
-
-
     
 ![png](3_files/3_72_1.png)
     
@@ -1806,15 +1491,6 @@ plt.show()
 ```python
 sns.countplot(x='loan', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='loan', ylabel='count'>
-
-
-
-
     
 ![png](3_files/3_74_1.png)
     
@@ -1839,15 +1515,6 @@ plt.show()
 sns.countplot(x='contact', hue='y', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='contact', ylabel='count'>
-
-
-
-
-    
 ![png](3_files/3_76_1.png)
     
 
@@ -1873,11 +1540,6 @@ plt.figure(figsize=(15,6))
 month_y.plot(kind='bar', stacked=True)
 plt.show()
 ```
-
-
-    <Figure size 1500x600 with 0 Axes>
-
-
 
     
 ![png](3_files/3_78_1.png)
@@ -1919,12 +1581,6 @@ dow_y.plot(kind='bar', stacked=True)
 plt.show()
 ```
 
-
-    <Figure size 800x500 with 0 Axes>
-
-
-
-    
 ![png](3_files/3_81_1.png)
     
 
@@ -1933,16 +1589,7 @@ plt.show()
 ```python
 df['duration'].hist(bins=20)
 ```
-
-
-
-
-    <Axes: >
-
-
-
-
-    
+  
 ![png](3_files/3_82_1.png)
     
 
@@ -1952,14 +1599,6 @@ df['duration'].hist(bins=20)
 sns.boxplot(x='y', y='duration', data=df)
 
 ```
-
-
-
-
-    <Axes: xlabel='y', ylabel='duration'>
-
-
-
 
     
 ![png](3_files/3_83_1.png)
@@ -1974,13 +1613,6 @@ df['campaign'].hist(bins=20)
 ```
 
 
-
-
-    <Axes: >
-
-
-
-
     
 ![png](3_files/3_85_1.png)
     
@@ -1990,14 +1622,6 @@ df['campaign'].hist(bins=20)
 ```python
 sns.violinplot(x='y', y='campaign', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='y', ylabel='campaign'>
-
-
-
 
     
 ![png](3_files/3_86_1.png)
@@ -2029,14 +1653,6 @@ df['pdays'].describe()
 df['pdays'].hist()
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](3_files/3_88_1.png)
     
@@ -2063,14 +1679,6 @@ df['pdays'].unique()
 df['previous'].hist(bins=20)
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](3_files/3_91_1.png)
     
@@ -2081,14 +1689,6 @@ df['previous'].hist(bins=20)
 sns.countplot(data=df, x='previous', hue='y')
 ```
 
-
-
-
-    <Axes: xlabel='previous', ylabel='count'>
-
-
-
-
     
 ![png](3_files/3_92_1.png)
     
@@ -2098,14 +1698,6 @@ sns.countplot(data=df, x='previous', hue='y')
 ```python
 sns.countplot(data=df, x='poutcome')
 ```
-
-
-
-
-    <Axes: xlabel='poutcome', ylabel='count'>
-
-
-
 
     
 ![png](3_files/3_93_1.png)
@@ -2120,16 +1712,7 @@ sns.countplot(data=df, x='poutcome')
 ```python
 df['emp.var.rate'].hist(bins=20)
 ```
-
-
-
-
-    <Axes: >
-
-
-
-
-    
+   
 ![png](3_files/3_96_1.png)
     
 
@@ -2139,15 +1722,6 @@ df['emp.var.rate'].hist(bins=20)
 sns.boxplot(data=df, x='y', y='emp.var.rate')
 ```
 
-
-
-
-    <Axes: xlabel='y', ylabel='emp.var.rate'>
-
-
-
-
-    
 ![png](3_files/3_97_1.png)
     
 
@@ -2156,14 +1730,6 @@ sns.boxplot(data=df, x='y', y='emp.var.rate')
 ```python
 df['cons.price.idx'].hist(bins=20)
 ```
-
-
-
-
-    <Axes: >
-
-
-
 
     
 ![png](3_files/3_98_1.png)
@@ -2175,14 +1741,6 @@ df['cons.price.idx'].hist(bins=20)
 sns.boxplot(data=df, x='y', y='cons.price.idx')
 ```
 
-
-
-
-    <Axes: xlabel='y', ylabel='cons.price.idx'>
-
-
-
-
     
 ![png](3_files/3_99_1.png)
     
@@ -2192,14 +1750,6 @@ sns.boxplot(data=df, x='y', y='cons.price.idx')
 ```python
 df['cons.conf.idx'].hist(bins=20)
 ```
-
-
-
-
-    <Axes: >
-
-
-
 
     
 ![png](3_files/3_100_1.png)
@@ -2211,14 +1761,6 @@ df['cons.conf.idx'].hist(bins=20)
 sns.boxplot(data=df, x='y', y='cons.conf.idx')
 ```
 
-
-
-
-    <Axes: xlabel='y', ylabel='cons.conf.idx'>
-
-
-
-
     
 ![png](3_files/3_101_1.png)
     
@@ -2228,14 +1770,6 @@ sns.boxplot(data=df, x='y', y='cons.conf.idx')
 ```python
 df['euribor3m'].hist(bins=20)
 ```
-
-
-
-
-    <Axes: >
-
-
-
 
     
 ![png](3_files/3_102_1.png)
@@ -2248,13 +1782,6 @@ sns.boxplot(data=df, x='y', y='euribor3m')
 ```
 
 
-
-
-    <Axes: xlabel='y', ylabel='euribor3m'>
-
-
-
-
     
 ![png](3_files/3_103_1.png)
     
@@ -2265,15 +1792,7 @@ sns.boxplot(data=df, x='y', y='euribor3m')
 df['nr.employed'].hist(bins=20)
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
-    
+ 
 ![png](3_files/3_104_1.png)
     
 
@@ -2282,14 +1801,6 @@ df['nr.employed'].hist(bins=20)
 ```python
 sns.boxplot(data=df, x='y', y='nr.employed')
 ```
-
-
-
-
-    <Axes: xlabel='y', ylabel='nr.employed'>
-
-
-
 
     
 ![png](3_files/3_105_1.png)
@@ -2436,7 +1947,7 @@ month_to_quarter = {
     'oct': '4', 'nov': '4', 'dec': '4'
 }
 
-# Применяем
+
 df_encoded['quarter'] = df['month'].map(month_to_quarter)
 ```
 
@@ -2733,15 +2244,8 @@ plt.title("my-nb confusion matrix")
 sns.heatmap(my_nb_matrix, annot=True,fmt="d",cbar=False, annot_kws={"size": 20})  
 ```
 
-
-
-
-    <Axes: title={'center': 'my-nb confusion matrix'}>
-
-
-
-
     
 ![png](3_files/3_129_1.png)
     
+
 
