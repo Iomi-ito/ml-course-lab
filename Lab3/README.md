@@ -2028,7 +2028,7 @@ for k in k_count:
         knn_current = KNN()
         knn_current.fit(X_tr_scaled, y_tr, k)
         y_pred = knn_current.predict(X_val_scaled) 
-        scores.append(accuracy_score(y_val, y_pred))
+        scores.append(f1_score(y_val, y_pred))
     
     avg_score = np.mean(scores)
     if avg_score > best_score:
@@ -2036,11 +2036,11 @@ for k in k_count:
         best_params = {'k': k}
 
 print("Лучшие параметры:", best_params)
-print("Лучший accuracy на обучении:", best_score)
+print("Лучший f1 на обучении:", best_score)
 ```
 
     Лучшие параметры: {'k': 7}
-    Лучший accuracy на обучении: 0.7666077349143816
+    Лучший f1 на обучении: 0.5694099209743417
     
 
 
@@ -2247,5 +2247,6 @@ sns.heatmap(my_nb_matrix, annot=True,fmt="d",cbar=False, annot_kws={"size": 20})
     
 ![png](3_files/3_129_1.png)
     
+
 
 
