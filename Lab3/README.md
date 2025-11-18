@@ -1947,7 +1947,6 @@ month_to_quarter = {
     'oct': '4', 'nov': '4', 'dec': '4'
 }
 
-
 df_encoded['quarter'] = df['month'].map(month_to_quarter)
 ```
 
@@ -2136,7 +2135,6 @@ models = {
         }
     }
 }
-
 results = {}
 
 for name, cfg in models.items():
@@ -2216,7 +2214,6 @@ print(table)
 ```python
 plt.figure(figsize=(24, 12))
 plt.suptitle("Confusion Matrices", fontsize=24)
-plt.subplots_adjust(wspace = 0.4, hspace= 0.4)
 i=1
 for name, r in results.items():
     plt.subplot(2,3,i)
@@ -2235,7 +2232,6 @@ for name, r in results.items():
 ```python
 plt.figure(figsize=(24, 12))
 plt.suptitle("Confusion Matrices", fontsize=24)
-plt.subplots_adjust(wspace = 0.4, hspace= 0.4)
 plt.subplot(2,3,1)
 plt.title("my-knn confusion matrix")
 sns.heatmap(my_knn_matrix, annot=True,fmt="d",cbar=False, annot_kws={"size": 20})  
@@ -2247,6 +2243,7 @@ sns.heatmap(my_nb_matrix, annot=True,fmt="d",cbar=False, annot_kws={"size": 20})
     
 ![png](3_files/3_129_1.png)
     
+
 
 
 
