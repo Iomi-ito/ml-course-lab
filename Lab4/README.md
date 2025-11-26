@@ -49,23 +49,6 @@ pd.set_option('display.max_columns', None)
 df.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -224,16 +207,7 @@ df.head()
 ```python
 sns.countplot(x='Cancer_Type', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='count'>
-
-
-
-
-    
+ 
 ![png](Lab4_files/Lab4_2_1.png)
     
 
@@ -267,12 +241,6 @@ df['Age'].hist()
 
 
 
-
-    <Axes: >
-
-
-
-
     
 ![png](Lab4_files/Lab4_5_1.png)
     
@@ -285,31 +253,13 @@ df['Age'].hist()
 sns.countplot(x='Gender', hue='Cancer_Type', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='Gender', ylabel='count'>
-
-
-
-
     
 ![png](Lab4_files/Lab4_7_1.png)
     
 
-
-
 ```python
 sns.violinplot(x='Cancer_Type', y='Age', hue='Gender', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Age'>
-
-
-
 
     
 ![png](Lab4_files/Lab4_8_1.png)
@@ -344,15 +294,7 @@ df['Smoking'].describe()
 df['Smoking'].hist()
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
-    
+  
 ![png](Lab4_files/Lab4_11_1.png)
     
 
@@ -362,15 +304,7 @@ df['Smoking'].hist()
 sns.boxplot(x='Cancer_Type', y='Smoking', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Smoking'>
-
-
-
-
-    
+   
 ![png](Lab4_files/Lab4_12_1.png)
     
 
@@ -381,15 +315,6 @@ df['Age_Group'] = pd.cut(df['Age'], bins=[0,30,45,60,80], labels=['<30','30-45',
 sns.boxplot(data=df,x='Cancer_Type',y='Smoking',hue='Age_Group')
 
 ```
-
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Smoking'>
-
-
-
-
     
 ![png](Lab4_files/Lab4_13_1.png)
     
@@ -403,14 +328,6 @@ sns.boxplot(data=df,x='Cancer_Type',y='Smoking',hue='Age_Group')
 df['Alcohol_Use'].hist()
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](Lab4_files/Lab4_15_1.png)
     
@@ -420,14 +337,6 @@ df['Alcohol_Use'].hist()
 ```python
 sns.boxplot(x='Cancer_Type', y='Alcohol_Use', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Alcohol_Use'>
-
-
-
 
     
 ![png](Lab4_files/Lab4_16_1.png)
@@ -439,14 +348,6 @@ sns.boxplot(x='Cancer_Type', y='Alcohol_Use', data=df)
 sns.boxplot(data=df,x='Cancer_Type',y='Alcohol_Use',hue='Age_Group')
 plt.legend(title='Age Group', bbox_to_anchor=(1.05, 1), loc='upper left')
 ```
-
-
-
-
-    <matplotlib.legend.Legend at 0x17d0cd7a210>
-
-
-
 
     
 ![png](Lab4_files/Lab4_17_1.png)
@@ -461,14 +362,6 @@ plt.legend(title='Age Group', bbox_to_anchor=(1.05, 1), loc='upper left')
 df['Obesity'].hist()
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](Lab4_files/Lab4_19_1.png)
     
@@ -478,14 +371,6 @@ df['Obesity'].hist()
 ```python
 sns.boxplot(x='Cancer_Type', y='Obesity', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Obesity'>
-
-
-
 
     
 ![png](Lab4_files/Lab4_20_1.png)
@@ -497,32 +382,14 @@ sns.boxplot(x='Cancer_Type', y='Obesity', data=df)
 sns.boxplot(x='Cancer_Type', y='Obesity', hue='Gender', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Obesity'>
-
-
-
-
     
 ![png](Lab4_files/Lab4_21_1.png)
     
-
-
 
 ```python
 sns.boxplot(data=df,x='Cancer_Type',y='Obesity',hue='Age_Group')
 plt.legend(title='Age Group', bbox_to_anchor=(1.05, 1), loc='upper left')
 ```
-
-
-
-
-    <matplotlib.legend.Legend at 0x17d0d2a1590>
-
-
-
 
     
 ![png](Lab4_files/Lab4_22_1.png)
@@ -552,13 +419,6 @@ sns.countplot(x='Family_History', hue='Cancer_Type', data=df)
 ```
 
 
-
-
-    <Axes: xlabel='Family_History', ylabel='count'>
-
-
-
-
     
 ![png](Lab4_files/Lab4_25_1.png)
     
@@ -570,22 +430,6 @@ pd.crosstab(df['Cancer_Type'], df['Family_History'], normalize='index')
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -638,32 +482,14 @@ pd.crosstab(df['Cancer_Type'], df['Family_History'], normalize='index')
 ```python
 df['Diet_Red_Meat'].hist()
 ```
-
-
-
-
-    <Axes: >
-
-
-
-
-    
+  
 ![png](Lab4_files/Lab4_28_1.png)
     
-
 
 
 ```python
 sns.boxplot(x='Cancer_Type', y='Diet_Red_Meat', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Diet_Red_Meat'>
-
-
-
 
     
 ![png](Lab4_files/Lab4_29_1.png)
@@ -675,14 +501,6 @@ sns.boxplot(x='Cancer_Type', y='Diet_Red_Meat', data=df)
 sns.boxplot(x='Cancer_Type', y='Diet_Red_Meat', hue='Gender', data=df)
 plt.legend(title='Gender', bbox_to_anchor=(1.05, 1), loc='upper left')
 ```
-
-
-
-
-    <matplotlib.legend.Legend at 0x17d0e6e0cd0>
-
-
-
 
     
 ![png](Lab4_files/Lab4_30_1.png)
@@ -697,14 +515,6 @@ plt.legend(title='Gender', bbox_to_anchor=(1.05, 1), loc='upper left')
 df['Diet_Salted_Processed'].hist()
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](Lab4_files/Lab4_32_1.png)
     
@@ -715,14 +525,6 @@ df['Diet_Salted_Processed'].hist()
 sns.boxplot(x='Cancer_Type', y='Diet_Salted_Processed',hue='Gender', data=df)
 plt.legend(title='Gender', bbox_to_anchor=(1.05, 1), loc='upper left')
 ```
-
-
-
-
-    <matplotlib.legend.Legend at 0x17d0e863890>
-
-
-
 
     
 ![png](Lab4_files/Lab4_33_1.png)
@@ -737,14 +539,6 @@ plt.legend(title='Gender', bbox_to_anchor=(1.05, 1), loc='upper left')
 df['Fruit_Veg_Intake'].hist()
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](Lab4_files/Lab4_35_1.png)
     
@@ -755,14 +549,6 @@ df['Fruit_Veg_Intake'].hist()
 sns.boxplot(x='Cancer_Type', y='Fruit_Veg_Intake',hue='Gender', data=df)
 plt.legend(title='Gender', bbox_to_anchor=(1.05, 1), loc='upper left')
 ```
-
-
-
-
-    <matplotlib.legend.Legend at 0x17d0ec9f9d0>
-
-
-
 
     
 ![png](Lab4_files/Lab4_36_1.png)
@@ -776,15 +562,6 @@ plt.legend(title='Gender', bbox_to_anchor=(1.05, 1), loc='upper left')
 ```python
 df['Physical_Activity'].hist()
 ```
-
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](Lab4_files/Lab4_38_1.png)
     
@@ -795,15 +572,6 @@ df['Physical_Activity'].hist()
 sns.boxplot(x='Cancer_Type', y='Physical_Activity',hue='Gender', data=df)
 plt.legend(title='Gender', bbox_to_anchor=(1.05, 1), loc='upper left')
 ```
-
-
-
-
-    <matplotlib.legend.Legend at 0x17d0ee41e50>
-
-
-
-
     
 ![png](Lab4_files/Lab4_39_1.png)
     
@@ -816,16 +584,7 @@ plt.legend(title='Gender', bbox_to_anchor=(1.05, 1), loc='upper left')
 ```python
 df['Air_Pollution'].hist()
 ```
-
-
-
-
-    <Axes: >
-
-
-
-
-    
+  
 ![png](Lab4_files/Lab4_41_1.png)
     
 
@@ -834,16 +593,7 @@ df['Air_Pollution'].hist()
 ```python
 sns.boxplot(x='Cancer_Type', y='Air_Pollution',hue='Gender', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Air_Pollution'>
-
-
-
-
-    
+   
 ![png](Lab4_files/Lab4_42_1.png)
     
 
@@ -855,16 +605,7 @@ sns.boxplot(x='Cancer_Type', y='Air_Pollution',hue='Gender', data=df)
 ```python
 df['Occupational_Hazards'].hist()
 ```
-
-
-
-
-    <Axes: >
-
-
-
-
-    
+ 
 ![png](Lab4_files/Lab4_44_1.png)
     
 
@@ -874,15 +615,6 @@ df['Occupational_Hazards'].hist()
 sns.boxplot(x='Cancer_Type', y='Occupational_Hazards',hue='Gender', data=df)
 ```
 
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Occupational_Hazards'>
-
-
-
-
-    
 ![png](Lab4_files/Lab4_45_1.png)
     
 
@@ -896,28 +628,15 @@ df['BRCA_Mutation'].value_counts(normalize=True)
 ```
 
 
-
-
     BRCA_Mutation
     0    0.9675
     1    0.0325
     Name: proportion, dtype: float64
 
 
-
-
 ```python
 sns.countplot(data=df, x='Cancer_Type', hue='BRCA_Mutation')
 ```
-
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='count'>
-
-
-
-
     
 ![png](Lab4_files/Lab4_48_1.png)
     
@@ -946,15 +665,6 @@ df['H_Pylori_Infection'].value_counts(normalize=True)
 sns.countplot(data=df, x='Cancer_Type', hue='H_Pylori_Infection')
 ```
 
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='count'>
-
-
-
-
-    
 ![png](Lab4_files/Lab4_51_1.png)
     
 
@@ -966,32 +676,13 @@ sns.countplot(data=df, x='Cancer_Type', hue='H_Pylori_Infection')
 ```python
 df['Calcium_Intake'].hist()
 ```
-
-
-
-
-    <Axes: >
-
-
-
-
-    
+ 
 ![png](Lab4_files/Lab4_53_1.png)
     
-
-
 
 ```python
 sns.boxplot(x='Cancer_Type', y='Calcium_Intake',hue='Gender', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Calcium_Intake'>
-
-
-
 
     
 ![png](Lab4_files/Lab4_54_1.png)
@@ -1025,14 +716,6 @@ df['BMI'].describe()
 df['BMI'].hist()
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](Lab4_files/Lab4_57_1.png)
     
@@ -1044,16 +727,7 @@ df['BMI_Group'] = pd.cut(df['BMI'],bins=[0, 18.5, 25, 30, 50], labels=['Underwei
 sns.boxplot(data=df, x='BMI_Group', y='Obesity')
 
 ```
-
-
-
-
-    <Axes: xlabel='BMI_Group', ylabel='Obesity'>
-
-
-
-
-    
+  
 ![png](Lab4_files/Lab4_58_1.png)
     
 
@@ -1066,14 +740,6 @@ sns.boxplot(data=df, x='BMI_Group', y='Obesity')
 df['Physical_Activity_Level'].hist()
 ```
 
-
-
-
-    <Axes: >
-
-
-
-
     
 ![png](Lab4_files/Lab4_60_1.png)
     
@@ -1083,16 +749,7 @@ df['Physical_Activity_Level'].hist()
 ```python
 sns.boxplot(x='Cancer_Type', y='Physical_Activity_Level',hue='Gender', data=df)
 ```
-
-
-
-
-    <Axes: xlabel='Cancer_Type', ylabel='Physical_Activity_Level'>
-
-
-
-
-    
+ 
 ![png](Lab4_files/Lab4_61_1.png)
     
 
@@ -1923,5 +1580,6 @@ print(accuracy_table)
 Во всех трех стратегиях ранжирование моделей по accuracy и f1-метрикам остается стабильным: SVM демонстрирует лучшие результаты, за ним идут Logistic Regression и Decision Tree. Метрика AUC-ROC в целом подтверждает эту картину: логистическая регрессия и деревья показывают чуть более высокие значения.
 При этом SVM имеет самое большое время обучения — среди всех моделей во всех стратегиях это самый долгий вариант. Тем не менее именно SVM остается наиболее сбалансированной по классам, что видно по classification_report: модель устойчиво работает как на крупных классах (Breast, Lung), так и на более мелких (Prostate, Skin), что не удается деревьям и частично удается логистической регрессии.
 Максимального качества SVM достигает в стратегии One-vs-One. Второе место среди всех моделей занимает Logistic Regression со стратегией One-vs-Rest: стабильные результаты, быстро обучается и высокий AUC-ROC.
+
 
 
